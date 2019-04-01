@@ -1,0 +1,55 @@
+
+html {
+}
+
+body {
+  background-color: rgba(150,150,150,1);
+  margin: 0px 0px 0px 0px;
+  /* outline-color: red;
+  outline-style: double;
+  outline-width: 2px; */
+}
+
+div.big-text {
+  position: absolute;
+  font-size: 40px;
+  top: 10px;
+  left: 10px;
+  width: 200px;
+  height: 100px;
+  color: darkgreen;
+  background-color: lightblue;
+}
+
+div.btn-contain {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  width: 100px;
+  height: auto;
+  background-color: lightblue;
+  /* outline-color: red;
+  outline-style: double;
+  outline-width: 2px; */
+}
+
+button.btn {
+  display: inline;
+  width: 40px;
+  height: 22px;
+  background-color: lightgreen;
+  outline-color: darkgreen;
+  outline-style: double;
+  outline-width: 2px;
+  border: none;
+}
+
+canvas#canvas {
+  display: absolute;
+  top: 0;
+  left: 0;
+  background-color: lightblue;
+  outline-color: blue;
+  outline-width: 2px;
+  outline-style: solid;
+}
