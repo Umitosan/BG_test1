@@ -15,10 +15,14 @@ div.big-text {
   font-size: 40px;
   top: 10px;
   left: 10px;
-  width: 200px;
-  height: 100px;
-  color: darkgreen;
-  background-color: lightblue;
+  width: 150px;
+  height: 80px;
+  color: darkblue;
+  background-color: black;
+  /* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; */
+  /* outline-color: red;
+  outline-style: double;
+  outline-width: 2px; */
 }
 
 div.btn-contain {
@@ -27,7 +31,7 @@ div.btn-contain {
   left: 10px;
   width: 100px;
   height: auto;
-  background-color: lightblue;
+  background-color: black;
   /* outline-color: red;
   outline-style: double;
   outline-width: 2px; */
@@ -37,8 +41,8 @@ button.btn {
   display: inline;
   width: 40px;
   height: 22px;
-  background-color: lightgreen;
-  outline-color: darkgreen;
+  background-color: lightblue;
+  outline-color: blue;
   outline-style: double;
   outline-width: 2px;
   border: none;
@@ -48,7 +52,7 @@ canvas#canvas {
   display: absolute;
   top: 0;
   left: 0;
-  background-color: lightblue;
+  background-color: black;
   outline-color: blue;
   outline-width: 2px;
   outline-style: solid;
