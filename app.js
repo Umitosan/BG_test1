@@ -12,6 +12,7 @@ let timeSinceResize;
 function animLoop() {
   myReq = window.requestAnimationFrame(animLoop);
   clearCanvas(ctx);
+  vis.update();
   vis.draw();
 }
 

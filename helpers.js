@@ -15,6 +15,15 @@ function clearCanvas(context) {
   }
 }
 
+function randSign() {
+  let num = getRandomIntInclusive(1,2);
+  if (num === 1) {
+    return 1;
+  } else {
+    return -1;
+  }
+}
+
 
 function randColor(type, alpha = null) { // default alpha = 1
   // more muted colors example
