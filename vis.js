@@ -8,10 +8,12 @@ function Visualization() {
   this.spacing = 50;
   this.timeSinceLastMove = undefined;
   this.moveTimer = 4000;
+  this.scan1Switch = false;
   this.totalColorPhaseTimer = 5000;
   this.colorPhaseTimeGap = undefined;
 
   this.init = function() {
+    this.scan1Switch = false;
     this.colTotal = Math.floor(winW/this.spacing) - 1;
     this.rowTotal = Math.floor(winH/this.spacing);
     console.log('dimensinos = '+this.colTotal+","+this.rowTotal);
@@ -88,7 +90,6 @@ function getRandomDir(goodNums, badDirs = undefined) {
   }
   return randNum;
 }
-
 
 function getRandomNodeCoords(someNode) {
   let loc = someNode.loc;
@@ -210,7 +211,6 @@ function getRandomNodeCoords(someNode) {
   return { x:coordX, y:coordY, r:coordRow , c:coordCol, dir:dirNum };
 }
 
-
 function Node(x,y,indices,colorOffset) {
   this.x = x;
   this.y = y;
@@ -262,9 +262,11 @@ function Node(x,y,indices,colorOffset) {
   };
 
   this.update = function() {
-    if ((performance.now() - this.lastColorChangeTime) > vis.totalColorPhaseTimer) {
-      this.lineColor = randColor("rgba");
-      this.lastColorChangeTime = performance.now();
+      if ((performance.now() - this.lastColorChangeTime) > vis.totalColorPhaseTimer) {
+        if (vis.scan1Switch) {
+          this.lineColor = randColor("rgba");
+        }
+        this.lastColorChangeTime = performance.now();
     }
     if ( Math.abs((this.x + this.xVel) - this.baseX) > vis.spacing ) {
       this.xVel *= -1;

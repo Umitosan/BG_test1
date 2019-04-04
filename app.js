@@ -32,6 +32,7 @@ function loadDoc() {
 
   btnGo = document.getElementById('btn-go');
   btnReset = document.getElementById('btn-reset');
+  btnScan1 = document.getElementById('btn-scan1');
 
   window.addEventListener('resize', function() { // auto resize canvas to fit window
     resetCanvasSize();
@@ -49,6 +50,18 @@ function loadDoc() {
     window.cancelAnimationFrame(myReq);
     myReq = undefined;
     clearCanvas(ctx);
+  });
+
+  btnScan1.addEventListener('click', function() {
+    console.log('SCAN1 clicked');
+    if (typeof(vis) === 'object') {
+      if (vis.scan1Switch) {
+        vis.scan1Switch = false;
+      } else {
+        vis.scan1Switch = true;
+      }
+      console.log('SCAN1 toggled');
+    }
   });
 
 } // end loadDoc()

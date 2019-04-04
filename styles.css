@@ -15,9 +15,9 @@ div.big-text {
   font-size: 40px;
   top: 10px;
   left: 10px;
-  width: 150px;
+  width: 160px;
   height: 80px;
-  color: darkblue;
+  color: lightblue;
   background-color: black;
   /* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; */
   /* outline-color: red;
@@ -29,7 +29,7 @@ div.btn-contain {
   position: absolute;
   top: 60px;
   left: 10px;
-  width: 100px;
+  width: 160px;
   height: auto;
   background-color: black;
   /* outline-color: red;
@@ -39,7 +39,7 @@ div.btn-contain {
 
 button.btn {
   display: inline;
-  width: 40px;
+  width: 46px;
   height: 22px;
   background-color: lightblue;
   outline-color: blue;
